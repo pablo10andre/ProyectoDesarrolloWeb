@@ -8,6 +8,8 @@ class ProyectoDesarrolloWebApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
+		System.out.println("Hola");
 	}
 
 }
