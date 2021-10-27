@@ -1,17 +1,9 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="css/estilos.css" rel="stylesheet"> 
-      <link href="css/index.css" rel="stylesheet"> 
-    <title>Hello, world!</title>
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+   <link href="css/estilos.css" rel="stylesheet"> 
 </head>
-
 <body>
+<header th:replace="layout/layout :: header"></header>
     <div class="container">
        
         <nav class="navbar navbar-expand-lg navbar-expand-sm-6  navbar-light bg-white">
@@ -86,7 +78,7 @@
              
       
 
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>  
+	<footer th:replace="layout/layout :: footer"></footer>    
 </body>
-
 </html>
