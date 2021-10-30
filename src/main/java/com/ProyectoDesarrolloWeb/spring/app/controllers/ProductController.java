@@ -18,7 +18,7 @@ public class ProductController {
 
 	
 	@RequestMapping(value = "/producto")
-	public String editarCliente(@RequestParam(required = false) String url, Model model) {
+	public String producto(@RequestParam(required = true) String url, Model model) {
 		Product producto_api=ConsumoApis.consumo_producto(url);   
 		System.out.println(producto_api.getProductTitle());
 		model.addAttribute("productos",producto_api);
