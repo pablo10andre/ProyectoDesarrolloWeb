@@ -1,0 +1,48 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/estilos.css" rel="stylesheet"> 
+      <link href="css/index.css" rel="stylesheet"> 
+    <title>Hello, world!</title>
+</head>
+
+<body>
+   
+       	<table class="table table-striped">
+					<thead class="bg-dark text-white text-center">
+						
+						
+						<tr>
+							<td>Producto</td>
+							<td>precio</td>
+							<td>descripcion 1</td>
+							<td>2</td>
+							<td>3</td>							
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="background-color:white" th:text="${productos.productTitle}"></td>
+							<td style="background-color:white" th:text="${productos.price}"></td>
+							<td style="background-color:white" th:each="feature: ${productos.features}" th:text="${feature}"></td>
+							
+							</tr>
+					</tbody>
+				</table>
+
+   <img th:each="image: ${productos.imageUrlList}" th:src="@{${image}}" width="400" height="341"></img>     
+
+             
+      
+
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

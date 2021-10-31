@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-    <html xmlns:th="http://www.thymeleaf.org"></html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +15,7 @@
    
     </head>
 <body>
-    
+     <form th:action="@{/login}" method="post">  
     <main class="card">
 
         <button class="btn" id="btn_out"> X </button>
@@ -22,11 +24,15 @@
                     <h4 id="new_user">New User?</h4>
                     <h5>Create an account</h5>
                     </div>
-                  
-        <input type="text" name="Usuario" id="user" placeholder="user">
-        <input type="password" name="Password" id="pass" placeholder="password">
+               
+        <input type="text" name="username" id="username" placeholder="UserName">
+        <input type="password" name="password" id="password" placeholder="Password">
         <button class="btn" id="btn_in">Sign In</button>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
     </main>
+        </form>
+        
+   
     
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
