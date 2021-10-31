@@ -29,15 +29,15 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 					</thead>
 					<tbody>
 						<tr>
-							<td style="background-color:white" th:text="${productosproductTitleb}"></td>
-							<td style="background-color:white" th:text="${productos.price}"></td>
-							<td style="background-color:white" th:each="feature: ${productos.features}" th:text="${feature}"></td>
+							<td style="background-color:white" th:text="${configuracion.Porcentaje_Adanual}"></td>
+							<td style="background-color:white" th:text="${configuracion.Costo_USA_GT}"></td>
+					
 							
 							</tr>
 					</tbody>
 				</table>
 
-   <img th:each="image: ${productos.imageUrlList}" th:src="@{${image}}" width="400" height="341"></img>     
+ 
 
              
       
