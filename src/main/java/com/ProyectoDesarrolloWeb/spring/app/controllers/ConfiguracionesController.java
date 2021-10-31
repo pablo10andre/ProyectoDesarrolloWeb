@@ -15,7 +15,7 @@ public class ConfiguracionesController {
 	@Autowired
 	private ConfiguracionesRepository configuraciones;
 
-	@RequestMapping(value = "/configuraciones", method = RequestMethod.GET)
+	@RequestMapping(value = "/configuracion", method = RequestMethod.GET)
 	public String detalleCliente(Model model) {
 
 		Configuraciones configuracion = configuraciones.findById((long) 1).get();
