@@ -13,7 +13,7 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
     <title>Configuraciones</title>
 </head>
 
-<body>
+<body sec:authorize="hasRole('ROLE_ADMIN')">
    
        	<table class="table table-striped">
 					<thead class="bg-dark text-white text-center">				

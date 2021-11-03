@@ -86,9 +86,9 @@
     </div>
     <div class="flexsearch">
       <div class="flexsearch--wrapper">
-        <form class="flexsearch--form" action="#" method="post">
+        <form class="flexsearch--form" th:action="@{/producto}">
           <div class="flexsearch--input-wrapper">
-            <input class="flexsearch--input" type="search" placeholder="buscar">
+            <input name="url" class="flexsearch--input" type="search" placeholder="buscar">
           </div>
         
         </form>

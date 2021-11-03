@@ -23,5 +23,5 @@ public class ProductController {
 		return "producto";
 	}	
 	
-	
+
 }
