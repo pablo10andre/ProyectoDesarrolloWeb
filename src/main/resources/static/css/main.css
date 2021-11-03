@@ -6,34 +6,27 @@
  }
 
 body{
-    width: 100%;
-    height: 100%;
+    
     background: #24262B 0% 0% no-repeat padding-box;
     opacity: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .card{
-    top: 83px;
     width: 660px;
     height: 500px;
-    left: center;
-    overflow: hidden;
-    position: absolute;
-    background: #FFFFFF1A 0% 0% no-repeat padding-box;
+    margin-top: 15px;
+    background: #FFFFFF26 0% 0% no-repeat padding-box;
     box-shadow: 5px 5px 15px #0000001A;
     opacity: 1;
-    border-radius: 15px; 
-
- 
+    border-radius: 15px;   
 }
 
 
 h1{
-margin-top: 5%;    
+   
 margin-left: 60px;
 text-align: left;
 color: #FFFFFF;
@@ -47,29 +40,30 @@ font-size: 115%;
 }
 
 h5{
-   margin-top: -32px;
-    margin-left: 180px;
+   margin-top: -30px;
+    margin-left: 205px;
     color: #632FEF;
     opacity: 1;
    
 }
 
-#user{
+#username{
     margin-left: 60px;
     width: 290px;
     height: 40px;
-    color:#FFFFFF26; 
+    color:#1e2022; 
     background: #FFFFFF26 0% 0% no-repeat padding-box;
     opacity: 1;
     border: none;
     
 }
 
-#pass{
+#password{
 width: 290px;
 height: 40px;
 margin-left: 60px;
 margin-top: 10px;
+color: transparent linear-gradient(100deg, #FC0441 0%, #F62DA8 100%) 0% 0% no-repeat padding-box;
 background: #FFFFFF26 0% 0% no-repeat padding-box;
 opacity: 1;
 border: none;
@@ -81,7 +75,7 @@ margin-left: 60px;
 margin-top: 5%;
 width: 290px;
 height: 40px;
-color:#FFFFFF;
+color:transparent linear-gradient(100deg, #FC0441 0%, #F62DA8 100%) 0% 0% no-repeat padding-box;
 background: transparent linear-gradient(100deg, #FC0441 0%, #F62DA8 100%) 0% 0% no-repeat padding-box;
 border-radius: 24px;
 opacity: 1;
@@ -90,7 +84,7 @@ opacity: 1;
 
 #btn_out{
     margin-left: 600px;
-    margin-top: 2%;
+  
     width: 40px;
     height: 40px;
     color:#FFFFFF;
