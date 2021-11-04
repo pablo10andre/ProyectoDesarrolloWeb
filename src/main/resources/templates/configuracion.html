@@ -10,34 +10,32 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
     <!-- Bootstrap CSS -->
     <link href="css/estilos.css" rel="stylesheet"> 
       <link href="css/index.css" rel="stylesheet"> 
-    <title>Hello, world!</title>
+    <title>Configuraciones</title>
 </head>
 
 <body>
    
        	<table class="table table-striped">
-					<thead class="bg-dark text-white text-center">
-						
-						
+					<thead class="bg-dark text-white text-center">				
 						<tr>
-							<td>Producto</td>
-							<td>precio</td>
-							<td>descripcion 1</td>
-							<td>2</td>
-							<td>3</td>							
+							<td>porcentaje adanual</td>
+							<td>Costo Envio desde Usa</td>					
+							<td>Costo Envio Local</td>
+							<td>Porcentaje Ganancia</td>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td style="background-color:white" th:text="${productosproductTitleb}"></td>
-							<td style="background-color:white" th:text="${productos.price}"></td>
-							<td style="background-color:white" th:each="feature: ${productos.features}" th:text="${feature}"></td>
+							<td style="background-color:white" th:text="${configuracion.Porcentaje_adanual}"></td>
+							<td style="background-color:white" th:text="${configuracion.Costo_USA_GT}"></td>
+							<td style="background-color:white" th:text="${configuracion.Costo_Envio_local}"></td>
+							<td style="background-color:white" th:text="${configuracion.Porcentaje_Ganancia}"></td>
 							
 							</tr>
 					</tbody>
 				</table>
 
-   <img th:each="image: ${productos.imageUrlList}" th:src="@{${image}}" width="400" height="341"></img>     
+ 
 
              
       
