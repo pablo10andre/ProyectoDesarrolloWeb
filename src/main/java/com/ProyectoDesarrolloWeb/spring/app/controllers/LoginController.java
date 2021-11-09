@@ -15,21 +15,25 @@ public class LoginController {
 	public String login(@RequestParam(value = "error", required = false) String error,
 			@RequestParam(value = "logout", required = false) String logout, Model model, Principal principal,
 			RedirectAttributes flash) {
-
+			boolean estado = false;
 		if (principal != null) {
 			flash.addFlashAttribute("info", "Ya ha inciado sesión anteriormente");
+			estado = true;
 			return "redirect:/";
 		}
 
 		if (error != null) {
 			model.addAttribute("error",
 					"Error en el login: Nombre de usuario o contraseña incorrecta, por favor vuelva a intentarlo!");
+			estado = false;
 		}
 
 		if (logout != null) {
 			model.addAttribute("success", "Ha cerrado sesión con éxito!");
+			estado = false;
 		}
-
+		String est = estado + "";
+		model.addAttribute("estado",est);
 		return "login";
 	}
 }

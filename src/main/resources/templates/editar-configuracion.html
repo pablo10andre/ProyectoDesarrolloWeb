@@ -1,0 +1,87 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/estilos.css" rel="stylesheet"> 
+      <link href="css/index.css" rel="stylesheet"> 
+    <title>Editar Configuraciones</title>
+</head>
+
+
+<body>
+
+			
+			
+				<form th:action="@{/editar-configuracion}" th:object="${configuracion}"
+					method="post" enctype="multipart/form-data">
+
+
+
+
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Costo envío local</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{Costo_Envio_local}" class="form-control"/>
+						</div>
+					</div>
+
+
+
+
+
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Costo envío USA a GT</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{Costo_USA_GT}" class="form-control" />
+						</div>
+					</div>
+
+
+
+
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">% Ganancia</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{Porcentaje_Ganancia}" class="form-control" />
+						</div>
+					</div>
+
+
+
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">% Impuesto aduana</label>
+						<div class="col-sm-6">
+							<input type="text" th:field="*{Porcentaje_adanual}" class="form-control" />
+						</div>
+					</div>
+
+
+
+					<input type="hidden" th:field="*{id}" />
+
+					<div class="form-group">
+						<div class="col-sm-6">
+							<input type="submit" value="Guardar" class="btn btn-secondary" />
+						</div>
+					</div>
+
+
+				</form>
+
+
+
+
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

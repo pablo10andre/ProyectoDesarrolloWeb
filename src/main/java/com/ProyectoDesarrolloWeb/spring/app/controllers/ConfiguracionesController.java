@@ -20,5 +20,53 @@ public class ConfiguracionesController {
 	@Autowired
 	private ConfiguracionesRepository configuraciones;
 
+	@PreAuthorize("hasRole('ROLE_ADMIN')")	
+	@RequestMapping(value = "/configuracion", method = RequestMethod.GET)
+	public String configuracion(Model model) {
+		Configuraciones configuracion = configuraciones.findById((long) 1).get();
+		model.addAttribute("configuracion", configuracion);
+		return "configuracion";
+	}
 	
+	
+	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")	
+	@RequestMapping(value = "/editar-configuracion/1", method = RequestMethod.GET)
+	public String editarCliente(Model model) {
+		Long id = 1L;
+		Configuraciones configuracion = null;
+		if (id == 1) {
+			configuracion = configuraciones.findById(id).get();
+		} else {
+			return "redirect:/configuraciones";
+		}
+		model.addAttribute("titulo", "Editar Configuracion");
+		model.addAttribute("configuracion", configuracion);
+		return "editar-configuracion";
+	}
+	
+	
+	
+	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")	
+	@RequestMapping(value = "/editar-configuracion", method = RequestMethod.POST)
+	public String guardarCliente(Configuraciones configuracion) {
+		Audit audit = null;
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (configuracion.getId() == 1) {
+			Configuraciones configuracion2 = configuraciones.findById(configuracion.getId()).get();
+			audit = new Audit(auth.getName());
+			configuracion.setAudit(audit);
+			configuracion.setId(configuracion2.getId());
+			configuracion.getAudit().setTsCreated(configuracion2.getAudit().getTsCreated());
+			configuracion.getAudit().setUsuCreated(configuracion2.getAudit().getUsuCreated());
+		} else {
+			audit = new Audit(auth.getName());
+			configuracion.setAudit(audit);
+		}
+
+		configuraciones.save(configuracion);
+		return "redirect:/configuracion";
+	}
+
 }

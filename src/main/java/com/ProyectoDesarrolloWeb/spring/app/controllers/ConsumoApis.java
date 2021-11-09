@@ -61,8 +61,7 @@ public class ConsumoApis {
         HttpEntity<Product> entity=new HttpEntity<>(headers);
         
 		System.out.println(uri.toUriString());
-		 
-
+		
 		
 		ResponseEntity<Product> responseEntity = 
 				  restTemplate.exchange(
