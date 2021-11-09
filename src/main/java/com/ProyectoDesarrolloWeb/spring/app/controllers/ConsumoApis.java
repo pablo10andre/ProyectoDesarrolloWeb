@@ -56,7 +56,7 @@ public class ConsumoApis {
 		
         HttpHeaders headers=new HttpHeaders();
         headers.set("x-rapidapi-host", "axesso-axesso-amazon-data-service-v1.p.rapidapi.com");
-        headers.set("x-rapidapi-key", "64d95a7b48msh73a031e39ad14f1p1928dbjsn568d8e615b6f");
+        headers.set("x-rapidapi-key", "3f9f77f962mshea89c1314d5fa77p10402ejsn994cd9549220");
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<Product> entity=new HttpEntity<>(headers);
         
