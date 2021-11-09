@@ -20,5 +20,29 @@ public class ConfiguracionesController {
 	@Autowired
 	private ConfiguracionesRepository configuraciones;
 
+	@PreAuthorize("hasRole('ROLE_ADMIN')")	
+	@RequestMapping(value = "/configuracion", method = RequestMethod.GET)
+	public String configuracion(Model model) {
+		Configuraciones configuracion = configuraciones.findById((long) 1).get();
+		model.addAttribute("configuracion", configuracion);
+		return "configuracion";
+	}
 	
+	
+	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")	
+	@RequestMapping(value = "/editar-configuracion/1", method = RequestMethod.GET)
+	public String editarCliente(Model model) {
+		Long id = 1L;
+		Configuraciones configuracion = null;
+		if (id == 1) {
+			configuracion = configuraciones.findById(id).get();
+		} else {
+			return "redirect:/configuraciones";
+		}
+		model.addAttribute("titulo", "Editar Configuracion");
+		model.addAttribute("configuracion", configuracion);
+		return "form-configuraciones";
+	}	
+
 }
