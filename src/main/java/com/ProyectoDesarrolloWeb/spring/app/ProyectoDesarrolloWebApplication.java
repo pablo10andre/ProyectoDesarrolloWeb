@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.ProyectoDesarrolloWeb.spring.app.controllers.ConsumoApis;
+
 
 
 @SpringBootApplication
@@ -24,6 +26,7 @@ public class ProyectoDesarrolloWebApplication implements CommandLineRunner {
 			String bcryptPassword = passwordEncoder.encode(password);
 			System.out.println(bcryptPassword);
 		}
+		
 		
 	}
 	
