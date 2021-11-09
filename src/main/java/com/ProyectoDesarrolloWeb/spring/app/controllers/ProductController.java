@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -44,9 +43,15 @@ public class ProductController {
 		total = total.add(ganancia);
 		total = total.add(costo_usa_gt);
 		total = total.add(costo_envio_local);
-		
+		total = total.add(cambio); 
+		double precio = total.doubleValue();
+		double preciofinal = Math.round(precio*100.0)/100.0;
+		System.out.print("TASA: " + producto_apiPrice + "    PRECIO: " + producto_api.getPrice());
+		System.out.print("aduana: " + aduana + " ganancia: " + ganancia + " cost usao: " + costo_usa_gt + " costogt: " + costo_envio_local + " total "+ total);
 		model.addAttribute("productos",producto_api);
-		model.addAttribute("precio",total);
+		model.addAttribute("precio",preciofinal);
 		return "producto";
 	}	
+	
+	
 }

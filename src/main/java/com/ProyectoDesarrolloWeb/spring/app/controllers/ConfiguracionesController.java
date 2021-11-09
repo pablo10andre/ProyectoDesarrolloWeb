@@ -42,8 +42,11 @@ public class ConfiguracionesController {
 		}
 		model.addAttribute("titulo", "Editar Configuracion");
 		model.addAttribute("configuracion", configuracion);
-		return "form-configuraciones";
+		return "editar-configuracion";
 	}
+	
+	
+	
 	
 	@PreAuthorize("hasRole('ROLE_ADMIN')")	
 	@RequestMapping(value = "/editar-configuracion", method = RequestMethod.POST)
@@ -63,7 +66,7 @@ public class ConfiguracionesController {
 		}
 
 		configuraciones.save(configuracion);
-		return "redirect:/configuraciones";
+		return "redirect:/configuracion";
 	}
 
 }
