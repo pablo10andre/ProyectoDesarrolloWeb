@@ -62,7 +62,7 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 					</thead>
 					<tbody>
 						<tr>
-							<td style="background-color:white" th:text="${productosproductTitleb}"></td>
+							<td style="background-color:white" th:text="${productos.productTitle}"></td>
 							<td style="background-color:white" th:text="${productos.price}"></td>
 							<td style="background-color:white" th:each="feature: ${productos.features}" th:text="${feature}"></td>
 							

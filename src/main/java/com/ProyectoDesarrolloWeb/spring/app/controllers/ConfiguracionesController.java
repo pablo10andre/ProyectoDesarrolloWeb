@@ -16,7 +16,7 @@ public class ConfiguracionesController {
 	private ConfiguracionesRepository configuraciones;
 
 	@RequestMapping(value = "/configuracion", method = RequestMethod.GET)
-	public String detalleCliente(Model model) {
+	public String configuracion(Model model) {
 
 		Configuraciones configuracion = configuraciones.findById((long) 1).get();
 		model.addAttribute("configuracion", configuracion);
