@@ -84,11 +84,11 @@
       </ul> 
     </div>
     </div>
-    <div class="flexsearch">
+    <div class="flexsearch col-12 col-sm-12 col-md-4">
       <div class="flexsearch--wrapper">
-        <form class="flexsearch--form" action="#" method="post">
+        <form class="flexsearch--form" th:action="@{/producto}">
           <div class="flexsearch--input-wrapper">
-            <input class="flexsearch--input" type="search" placeholder="buscar">
+            <input name="url" class="flexsearch--input" type="search" placeholder="buscar">
           </div>
         
         </form>
@@ -106,10 +106,10 @@
         />
 
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Tarjeta gráfica NVIDIA GeForce RTX 3070 </h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Multiprocesadores NVIDIA Ampere Streaming: los bloques de construcción para la GPU más rápida
+            y eficiente del mundo, el nuevo Ampere SM aporta 2 veces el rendimiento FP32 y una mejor eficiencia energética.
           </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -161,10 +161,11 @@
             <div class="card-body">
               <h5 class="card-company">Quienes Somos?</h5>
               <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                voluptate, quisquam rerum optio sunt minima obcaecati voluptatem
-                modi necessitatibus dolorem nihil, perferendis quis. In
-                voluptates, repudiandae reprehenderit optio deleniti quibusdam!
+                Amazon surgió en el año 1995, y fue fundada por Jeffrey Bezos a sus 34 años como un comercio de libros a través de la internet.
+                Jeff Bezos, fue un estudiante de ingeniería eléctrica e informática en la Universidad de Princeton.
+                Durante el año 1986, inició sus trabajos en el sector de la tecnología, en una compañía de fibra óptica de la cual llegó a ser el vicepresidente.
+                Luego, en el periodo que corre desde 1990 a 1994, estuvo trabajando en una empresa llamada Shaw and Co, en Wall Street.
+                Bezos abandonó su trabajo en el año 1994 y se mudó a la ciudad de Seattle, donde junto a su esposa crearon la librería más grande del mundo llamada Amazon.
               </div>
             </div>
           </div>
@@ -172,8 +173,10 @@
           <div class="card col-12 col-sm-12 col-md-4">
             <div class="card-body">
               <h5 class="card-atributos">Mision y vision?</h5>
+              <p>“Nos esforzamos por ofrecer a nuestros clientes los precios más bajos posibles, la mejor selección disponible y la mayor comodidad”.</p>
+              <p>"Ser la compañía más centrada en el cliente del mundo, donde nuestros clientes pueden encontrar y descubrir cualquier cosa que deseen comprar en línea"</p>
               <p>Contáctanos</p>
-              <p>Términos y condiciones</p>
+            
             </div>
           </div>
         </div>

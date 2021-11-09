@@ -65,20 +65,36 @@ body {
   background-size: cover;
   background-position: center;
   justify-content: center;
+
 }
 
 
 
-
 .flexsearch--input {
-height: 35px;
+ height: 40px;
+ width: 400px;
   padding: 0 46px 0 10px;
-  background: transparent linear-gradient(104deg, #fc0441 0%, #f62da8 100%) 0%
+  background: transparent linear-gradient(104deg, #f62da8 5%, #4F26B1 100%) 0%
   0% no-repeat padding-box;
-
   border-radius: 35px; /* (height/2) + border-width */
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
+  border-color: #4F26B1; 
   font-size: 14px;
+ 
 
+}
+
+.flexsearch--input{
+  color: white;
+  margin-bottom: 1%;
+ 
+}
+
+.flexsearch{
+  margin: 0 auto;
+}
+
+.nav{
+  margin-top: 1%;
 }

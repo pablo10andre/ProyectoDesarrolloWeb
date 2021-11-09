@@ -9,16 +9,49 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="css/estilos.css" rel="stylesheet"> 
-      <link href="css/index.css" rel="stylesheet"> 
-    <title>Hello, world!</title>
+      <link href="css/Producto.css" rel="stylesheet"> 
+    <title>Producto</title>
 </head>
 
 <body>
-   
+
+	<div
+	class="card col-12 col-sm-12 col-md-4 text-white bg-dark"
+	style="width: 20rem; padding: 2%">
+
+
+	<div class="card-body">
+	  <h5 class="card-title" th:text="${feature}"></h5>
+	  <p class="card-text" th:text="${productos.price}">
+	  </p>
+	  <a href="#" class="btn btn-primary">Comprar</a>
+	</div>
+	<img
+	th:each="image: ${productos.imageUrlList}" th:src="@{${image}}" width="150" height="150"
+	  class="card-img-top"
+	  alt="..."
+	/>
+
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="" class="d-block w-100" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="" class="d-block w-100" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="..." class="d-block w-100" alt="...">
+		  </div>
+		</div>
+	  </div>
+
+
+
+  </div>
+
        	<table class="table table-striped">
-					<thead class="bg-dark text-white text-center">
-						
-						
+					<thead class="bg-dark text-white text-center">	
 						<tr>
 							<td>Producto</td>
 							<td>precio</td>
@@ -37,10 +70,9 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 					</tbody>
 				</table>
 
-   <img th:each="image: ${productos.imageUrlList}" th:src="@{${image}}" width="400" height="341"></img>     
+   <img th:each="image: ${productos.imageUrlList}" th:src="@{${image}}" width="200" height="150"></img>     
 
              
-      
 
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
