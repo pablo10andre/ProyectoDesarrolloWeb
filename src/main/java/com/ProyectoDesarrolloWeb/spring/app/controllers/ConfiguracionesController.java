@@ -44,5 +44,6 @@ public class ConfiguracionesController {
 		model.addAttribute("configuracion", configuracion);
 		return "form-configuraciones";
 	}	
+	//prueba
 
 }
