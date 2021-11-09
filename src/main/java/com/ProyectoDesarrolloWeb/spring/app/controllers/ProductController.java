@@ -45,11 +45,19 @@ public class ProductController {
 		total = total.add(costo_envio_local);
 		total = total.add(cambio); 
 		double precio = total.doubleValue();
-		double preciofinal = Math.round(precio*100.0)/100.0;
-		System.out.print("TASA: " + producto_apiPrice + "    PRECIO: " + producto_api.getPrice());
-		System.out.print("aduana: " + aduana + " ganancia: " + ganancia + " cost usao: " + costo_usa_gt + " costogt: " + costo_envio_local + " total "+ total);
-		model.addAttribute("productos",producto_api);
-		model.addAttribute("precio",preciofinal);
+        double preciofinal = Math.round(precio*100.0)/100.0;
+        double preciosin = Math.round(cambio.doubleValue()*100.0)/100.0;
+        double aduana2 = Math.round(aduana.doubleValue()*100.0)/100.0;
+        double ganancia2 = Math.round(ganancia.doubleValue()*100.0)/100.0;
+        double costousa2 = Math.round(costo_usa_gt.doubleValue()*100.0)/100.0;
+        double costolocal2 = Math.round(costo_envio_local.doubleValue()*100.0)/100.0;
+        model.addAttribute("productos",producto_api);
+        model.addAttribute("precio","Q " + preciofinal);
+        model.addAttribute("precionsin","Q " + preciosin);
+        model.addAttribute("aduana","Q " + aduana2);
+        model.addAttribute("otros","Q " + ganancia2);
+        model.addAttribute("usa","Q " + costousa2);
+        model.addAttribute("gt","Q " + costolocal2);
 		return "producto";
 	}	
 	

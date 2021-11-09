@@ -31,7 +31,7 @@ public class ConfiguracionesController {
 	
 	
 	@PreAuthorize("hasRole('ROLE_ADMIN')")	
-	@RequestMapping(value = "/editar-configuracion/1", method = RequestMethod.GET)
+	@RequestMapping(value = "/editarconfiguracion/1", method = RequestMethod.GET)
 	public String editarCliente(Model model) {
 		Long id = 1L;
 		Configuraciones configuracion = null;
@@ -42,7 +42,7 @@ public class ConfiguracionesController {
 		}
 		model.addAttribute("titulo", "Editar Configuracion");
 		model.addAttribute("configuracion", configuracion);
-		return "editar-configuracion";
+		return "editarconfiguracion";
 	}
 	
 	

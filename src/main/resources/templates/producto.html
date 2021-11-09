@@ -118,9 +118,28 @@
 
 		  <div class="card-body text-white ">
 			<h5 class="card-title" th:text="${productos.productTitle}" style="font-size: x-small"></h5>
-			<h4 style="text-align: center; margin-top: 10px;">Detalle Cotizacion</h4>
-			<h2 class="card-text" th:text="${productos.price}" style="color: #f62da8; text-align: left;"></h2>
-			
+			<h2 style="text-align: center; margin-top: 10px;">Detalle Cotizacion</h2>
+      <br>
+			<!-- <h2 class="card-text" th:text="${productos.price}" style="color: #f62da8; text-align: left;"></h2> -->
+      <br>
+      <h4>Precio sin Cargos</h4>
+      <h3 class="card-text" th:text="${precionsin}" style="color: #f62da8; text-align: left;"></h3>
+      <br>
+      <h4>Impuestos</h4>
+      <h3 class="card-text" th:text="${aduana}" style="color: #f62da8; text-align: left;"></h3>
+			<br>
+      <h4>Gastos del Shipping</h4>
+      <h3 class="card-text" th:text="${usa}" style="color: #f62da8; text-align: left;"></h3>
+      <br>
+      <h4>Gastos envio interior del pais</h4>
+      <h3 class="card-text" th:text="${gt}" style="color: #f62da8; text-align: left;"></h3>
+      <br>
+      <h4>Otros Gastos</h4>
+      <h3 class="card-text" th:text="${otros}" style="color: #f62da8; text-align: left;"></h3>
+      <br>
+      <h4>Total</h4>
+      <h2 class="card-text" th:text="${precio}" style="color: #f62da8; text-align: left;"></h2>
+
 			<a href="#" class="btn btn-primary">Comprar</a>
 	
 		  </div>
